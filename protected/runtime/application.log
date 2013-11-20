@@ -283,3 +283,61 @@ Stack trace:
 REQUEST_URI=/decamesoft/usuariocliente/create/
 in C:\xampp\htdocs\decamesoft\protected\controllers\UsuarioClienteController.php (71)
 in C:\xampp\htdocs\decamesoft\index.php (13)
+2013/11/20 16:17:12 [error] [php] include(Huesped.php): failed to open stream: No such file or directory (C:\xampp\htdocs\yii\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(395): spl_autoload_call()
+#1 C:\xampp\htdocs\yii\framework\web\CActiveDataProvider.php(165): model()
+#2 C:\xampp\htdocs\yii\framework\web\CActiveDataProvider.php(87): CActiveDataProvider->getModel()
+#3 C:\xampp\htdocs\decamesoft\protected\controllers\HuespedController.php(125): CActiveDataProvider->__construct()
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): HuespedController->actionIndex()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): HuespedController->runAction()
+#7 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#9 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): HuespedController->filterAccessControl()
+#10 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#11 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\xampp\htdocs\yii\framework\web\CController.php(265): HuespedController->runActionWithFilters()
+#13 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): HuespedController->run()
+#14 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\decamesoft\index.php(13): CWebApplication->run()
+REQUEST_URI=/decamesoft/huesped
+in C:\xampp\htdocs\decamesoft\protected\controllers\HuespedController.php (125)
+in C:\xampp\htdocs\decamesoft\index.php (13)
+2013/11/20 16:19:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rol".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('rol')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\decamesoft\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/decamesoft/rol
+HTTP_REFERER=http://localhost/decamesoft/
+---
+2013/11/20 16:19:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "huesped".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('huesped')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\decamesoft\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/decamesoft/huesped
+HTTP_REFERER=http://localhost/decamesoft/
+---
+2013/11/20 16:19:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "tiposervicio".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tiposervicio')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\decamesoft\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/decamesoft/tiposervicio
+HTTP_REFERER=http://localhost/decamesoft/huesped
+---
+2013/11/20 16:19:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "rol".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('rol')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\decamesoft\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/decamesoft/rol
+HTTP_REFERER=http://localhost/decamesoft/tiposervicio
+---
