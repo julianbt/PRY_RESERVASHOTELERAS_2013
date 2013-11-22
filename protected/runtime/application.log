@@ -2233,74 +2233,117 @@ Stack trace:
 REQUEST_URI=/reserva/css/img/imagen3.jpg
 HTTP_REFERER=http://localhost/reserva/site/index
 ---
-2013/11/22 05:25:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "reporte".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+2013/11/22 07:07:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
 Stack trace:
-#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('reporte')
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii')
 #1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
-#2 C:\xampp\htdocs\reserva\index.php(13): CApplication->run()
+#2 C:\xampp\htdocs\decamesoft\index.php(13): CApplication->run()
 #3 {main}
-REQUEST_URI=/reserva/reporte
+REQUEST_URI=/decamesoft/gii
 ---
-2013/11/22 05:25:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "reporte/index".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+2013/11/22 07:19:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "_form".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
 Stack trace:
-#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('reporte/index')
-#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
-#2 C:\xampp\htdocs\reserva\index.php(13): CApplication->run()
-#3 {main}
-REQUEST_URI=/reserva/reporte/index
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('_form')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('_form')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('alojamiento/_fo...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\decamesoft\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/decamesoft/alojamiento/_form
 ---
-2013/11/22 06:06:39 [error] [php] Undefined variable: style (C:\xampp\htdocs\reserva\themes\decamesoft\views\site\index.php:42)
+2013/11/22 07:20:47 [error] [exception.CException] exception 'CException' with message 'ReservaController cannot find the requested view "alojamiento/_form".' in C:\xampp\htdocs\yii\framework\web\CController.php:878
 Stack trace:
-#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
-#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
-#2 C:\xampp\htdocs\reserva\protected\controllers\SiteController.php(32): SiteController->render()
-#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
-#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
-#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
-#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
-#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
-#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
-#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
-#10 C:\xampp\htdocs\reserva\index.php(13): CWebApplication->run()
-REQUEST_URI=/reserva/
-in C:\xampp\htdocs\reserva\themes\decamesoft\views\site\index.php (42)
-in C:\xampp\htdocs\reserva\protected\controllers\SiteController.php (32)
-in C:\xampp\htdocs\reserva\index.php (13)
-2013/11/22 06:07:47 [error] [php] Undefined variable: swelcome (C:\xampp\htdocs\reserva\themes\decamesoft\views\site\index.php:51)
+#0 C:\xampp\htdocs\decamesoft\protected\views\reserva\create.php(19): CController->renderPartial('alojamiento/_fo...', Array)
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#5 C:\xampp\htdocs\decamesoft\protected\controllers\ReservaController.php(79): CController->render('create', Array)
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): ReservaController->actionCreate()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('reserva/create')
+#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\decamesoft\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/decamesoft/reserva/create
+---
+2013/11/22 07:21:02 [error] [exception.CException] exception 'CException' with message 'ReservaController cannot find the requested view "alojamiento/create/_form".' in C:\xampp\htdocs\yii\framework\web\CController.php:878
 Stack trace:
-#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
-#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
-#2 C:\xampp\htdocs\reserva\protected\controllers\SiteController.php(32): SiteController->render()
-#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
-#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
-#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
-#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
-#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
-#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
-#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
-#10 C:\xampp\htdocs\reserva\index.php(13): CWebApplication->run()
-REQUEST_URI=/reserva/
-in C:\xampp\htdocs\reserva\themes\decamesoft\views\site\index.php (51)
-in C:\xampp\htdocs\reserva\protected\controllers\SiteController.php (32)
-in C:\xampp\htdocs\reserva\index.php (13)
-2013/11/22 06:18:38 [error] [php] Use of undefined constant Recordarme - assumed 'Recordarme' (C:\xampp\htdocs\reserva\protected\views\site\login.php:36)
+#0 C:\xampp\htdocs\decamesoft\protected\views\reserva\create.php(19): CController->renderPartial('alojamiento/cre...', Array)
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#5 C:\xampp\htdocs\decamesoft\protected\controllers\ReservaController.php(79): CController->render('create', Array)
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): ReservaController->actionCreate()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('reserva/create')
+#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\decamesoft\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/decamesoft/reserva/create
+---
+2013/11/22 07:21:09 [error] [exception.CException] exception 'CException' with message 'ReservaController cannot find the requested view "alojamiento/create".' in C:\xampp\htdocs\yii\framework\web\CController.php:878
 Stack trace:
-#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
-#1 C:\xampp\htdocs\reserva\themes\decamesoft\views\site\index.php(62): SiteController->renderPartial()
-#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
-#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
-#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
-#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
-#6 C:\xampp\htdocs\reserva\protected\controllers\SiteController.php(32): SiteController->render()
-#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
-#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
-#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
-#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
-#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
-#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
-#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
-#14 C:\xampp\htdocs\reserva\index.php(13): CWebApplication->run()
-REQUEST_URI=/reserva/
-in C:\xampp\htdocs\reserva\protected\views\site\login.php (36)
-in C:\xampp\htdocs\reserva\themes\decamesoft\views\site\index.php (62)
-in C:\xampp\htdocs\reserva\protected\controllers\SiteController.php (32)
+#0 C:\xampp\htdocs\decamesoft\protected\views\reserva\create.php(19): CController->renderPartial('alojamiento/cre...', Array)
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#5 C:\xampp\htdocs\decamesoft\protected\controllers\ReservaController.php(79): CController->render('create', Array)
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): ReservaController->actionCreate()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('reserva/create')
+#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\decamesoft\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/decamesoft/reserva/create
+---
+2013/11/22 07:21:42 [error] [exception.CException] exception 'CException' with message 'ReservaController cannot find the requested view "alojamiento".' in C:\xampp\htdocs\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\decamesoft\protected\views\reserva\create.php(19): CController->renderPartial('alojamiento', Array)
+#1 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#5 C:\xampp\htdocs\decamesoft\protected\controllers\ReservaController.php(79): CController->render('create', Array)
+#6 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): ReservaController->actionCreate()
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('reserva/create')
+#17 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\decamesoft\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/decamesoft/reserva/create
+---
