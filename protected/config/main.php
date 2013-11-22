@@ -62,6 +62,11 @@ return array(
 			'password' => '',
 			'charset' => 'utf8',
 		),
+		'params'=>array(
+        'uploadPath'=>dirname(__FILE__).'/../../uploads',
+        'uploadUrl'=>'/uploads',
+         ),
+		
 		/**/
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors

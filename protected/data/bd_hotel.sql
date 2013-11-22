@@ -239,7 +239,7 @@ CREATE TABLE IF NOT EXISTS `tipo_servicio` (
 CREATE TABLE IF NOT EXISTS `usuario` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `usuario` varchar(30) NOT NULL,
-  `contrasena` varchar(15) NOT NULL,
+  `contrasena` varchar(40) NOT NULL,
   `persona` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_usuario_persona1_idx` (`persona`)
