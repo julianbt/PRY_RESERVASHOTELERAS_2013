@@ -40,8 +40,8 @@
           'htmlOptions'=>array("class"=>"nav"),
           'items'=>array(
             array('label'=>'Inicio', 'url'=>array('/site/index')),
-            array('label'=>'Quienes somos', 'url'=>array('/site/page', 'view'=>'about')),
-            array('label'=>'', 'url'=>array('/site/contact')),
+            #array('label'=>'Quienes somos', 'url'=>array('/site/page', 'view'=>'about')),
+            #array('label'=>'', 'url'=>array('/site/contact')),
             array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
             array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
           ),

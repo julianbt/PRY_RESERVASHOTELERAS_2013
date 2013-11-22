@@ -2233,3 +2233,74 @@ Stack trace:
 REQUEST_URI=/reserva/css/img/imagen3.jpg
 HTTP_REFERER=http://localhost/reserva/site/index
 ---
+2013/11/22 05:25:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "reporte".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('reporte')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reserva\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reserva/reporte
+---
+2013/11/22 05:25:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "reporte/index".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('reporte/index')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reserva\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reserva/reporte/index
+---
+2013/11/22 06:06:39 [error] [php] Undefined variable: style (C:\xampp\htdocs\reserva\themes\decamesoft\views\site\index.php:42)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\reserva\protected\controllers\SiteController.php(32): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\reserva\index.php(13): CWebApplication->run()
+REQUEST_URI=/reserva/
+in C:\xampp\htdocs\reserva\themes\decamesoft\views\site\index.php (42)
+in C:\xampp\htdocs\reserva\protected\controllers\SiteController.php (32)
+in C:\xampp\htdocs\reserva\index.php (13)
+2013/11/22 06:07:47 [error] [php] Undefined variable: swelcome (C:\xampp\htdocs\reserva\themes\decamesoft\views\site\index.php:51)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\reserva\protected\controllers\SiteController.php(32): SiteController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\reserva\index.php(13): CWebApplication->run()
+REQUEST_URI=/reserva/
+in C:\xampp\htdocs\reserva\themes\decamesoft\views\site\index.php (51)
+in C:\xampp\htdocs\reserva\protected\controllers\SiteController.php (32)
+in C:\xampp\htdocs\reserva\index.php (13)
+2013/11/22 06:18:38 [error] [php] Use of undefined constant Recordarme - assumed 'Recordarme' (C:\xampp\htdocs\reserva\protected\views\site\login.php:36)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\reserva\themes\decamesoft\views\site\index.php(62): SiteController->renderPartial()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#6 C:\xampp\htdocs\reserva\protected\controllers\SiteController.php(32): SiteController->render()
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\reserva\index.php(13): CWebApplication->run()
+REQUEST_URI=/reserva/
+in C:\xampp\htdocs\reserva\protected\views\site\login.php (36)
+in C:\xampp\htdocs\reserva\themes\decamesoft\views\site\index.php (62)
+in C:\xampp\htdocs\reserva\protected\controllers\SiteController.php (32)

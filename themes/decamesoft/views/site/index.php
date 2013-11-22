@@ -1,6 +1,13 @@
 <?php
 /* @var $this SiteController */
 $this->pageTitle=Yii::app()->name;
+if(Yii::app()->user->name!="Guest"){
+	$slogin = "style='display: none;'";
+	$swelcome = "";
+}else{
+	$slogin = "";
+	$swelcome = "style='display: none;'";
+}
 ?>
 <script type="text/javascript">
 function MM_preloadImages() { //v3.0
@@ -20,7 +27,7 @@ function MM_preloadImages() { //v3.0
           <img src="<?php echo Yii::app()->request->baseUrl; ?>/css/img/logo2.png"/>
           <h4 style="font-size: 40px; color: #F00; font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, sans-serif; font-weight: 900;">HOTEL DECAMESOF<span style="font-weight: 900">T</span></h4>
           <img src="<?php echo Yii::app()->request->baseUrl; ?>/css/img/imagen4.jpg"/>
-		  <h2 style="color: #FFFFFF; font-size: xx-large; font-weight: 800;">Bienvenido</h2>
+		  <h2 style="color: #666666; font-size: xx-large; font-weight: 800;">Bienvenido</h2>
 		  <p style="text-align: left">&nbsp;</p>
         <h3 class="media-body" style="text-align: left; font-size: 36px; font-weight: 900;"> Mision:</h3>
 <p style="text-align: justify; font-size: 18px;">Somos una organización que siempre piensa en el bienestar de nuetros huéspedes, contamos con la mejor calidad humana para hacer de su estadía una experiencia verdaderamente unica. </p>
@@ -32,17 +39,32 @@ function MM_preloadImages() { //v3.0
     </div><!-- /.span4 -->
     <div class="span4">
   <div class="well">
+	<div class="login" <?php echo $slogin; ?>>
+        <?php
+			$model=new LoginForm;
 
-        <form class="form-signin">
-        <h2 class="form-signin-heading">Iniciar Sesión</h2>
-        <input type="text" class="input-block-level" placeholder="Email address">
-        <input type="password" class="input-block-level" placeholder="Password">
-        <label class="checkbox">
-          <input type="checkbox" value="remember-me"> 
-          Recordarme
-        </label>
-        <button class="btn btn-primary btn-large btn-block" type="submit">Iniciar sesión</button> <br/>
-		
+			// if it is ajax validation request
+			if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
+			{
+				echo CActiveForm::validate($model);
+				Yii::app()->end();
+			}
+	
+			// collect user input data
+			if(isset($_POST['LoginForm']))
+			{
+			$model->attributes=$_POST['LoginForm'];
+			// validate user input and redirect to the previous page if valid
+			if($model->validate() && $model->login())
+				$this->redirect(Yii::app()->user->returnUrl);
+		}
+		// display the login form
+		$this->renderpartial('login',array('model'=>$model));
+		?>
+	</div>	
+    <div class="welcome" <?php echo $swelcome ?> >
+    	<h2 class="form-signin-heading">Hola <?php echo Yii::app()->user->name ?> Bienvenido a Decamesoft</h2>
+    </div> 
 		<img src="<?php echo Yii::app()->request->baseUrl; ?>/css/img/imagen2.jpg"/> 
 		<br/>
 		<img src="<?php echo Yii::app()->request->baseUrl; ?>/css/img/imagen3.jpg"/> 
