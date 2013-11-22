@@ -2188,3 +2188,48 @@ Stack trace:
 REQUEST_URI=/reserva/site/login
 HTTP_REFERER=http://localhost/reserva/site/login
 ---
+2013/11/22 04:59:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/imagen3.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/imagen3...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reserva\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reserva/css/img/imagen3.jpg
+HTTP_REFERER=http://localhost/reserva/site/index
+---
+2013/11/22 04:59:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/imagen4.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/imagen4...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reserva\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reserva/css/img/imagen4.jpg
+HTTP_REFERER=http://localhost/reserva/site/index
+---
+2013/11/22 04:59:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/imagen2.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/imagen2...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reserva\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reserva/css/img/imagen2.jpg
+HTTP_REFERER=http://localhost/reserva/site/index
+---
+2013/11/22 04:59:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/logo2.png".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/logo2.p...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reserva\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reserva/css/img/logo2.png
+HTTP_REFERER=http://localhost/reserva/site/index
+---
+2013/11/22 04:59:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/img/imagen3.jpg".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('css/img/imagen3...')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\reserva\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/reserva/css/img/imagen3.jpg
+HTTP_REFERER=http://localhost/reserva/site/index
+---
